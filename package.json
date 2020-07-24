@@ -1,0 +1,22 @@
+{
+  "name": "another-rn-bottom-tab-navigator",
+  "version": "0.1.1",
+  "description": "Had problems with React Navigation's Bottom Tabs and Material Bottom Tabs Navigator, so this is for me. It's unfinished, basic, fits me specific needs, and is likely missing a lot.",
+  "main": "index.js",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tdous/another-rn-bottom-tab-navigator.git"
+  },
+  "author": "Tom Dancer",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/tdous/another-rn-bottom-tab-navigator/issues"
+  },
+  "homepage": "https://github.com/tdous/another-rn-bottom-tab-navigator#readme",
+  "peerDependencies": {
+    "react": "^16.13.1",
+    "react-native": "^0.63.0",
+    "@react-navigation/native": "^5.7.0"
+  }
+}
