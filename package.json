@@ -1,6 +1,6 @@
 {
   "name": "another-rn-bottom-tab-navigator",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Had problems with React Navigation's Bottom Tabs and Material Bottom Tabs Navigator, so this is for me. It's unfinished, basic, fits me specific needs, and is likely missing a lot.",
   "main": "index.js",
   "scripts": {},
@@ -18,5 +18,8 @@
     "react": "^16.13.1",
     "react-native": "^0.63.0",
     "@react-navigation/native": "^5.7.0"
+  },
+  "dependencies": {
+    "react-native-safe-area-context": "^3.1.9"
   }
 }

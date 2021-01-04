@@ -1,6 +1,13 @@
 'use strict';
 import React from 'react';
-import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
+import {
+  Platform,
+  StyleSheet,
+  Text,
+  TouchableOpacity,
+  View
+} from 'react-native';
+import { useSafeAreaInsets } from 'react-native-safe-area-context';
 
 import {
   createNavigatorFactory,
@@ -48,12 +55,22 @@ export const AnotherRNBottomTabNavigator = (props) => {
     initialRouteName,
   });
 
+  let additionalBottomPadding = 0;
+  let finalBarStyle = [tabBarStyle, styles.bar];
+  if (Platform.OS === 'ios') {
+    const insets = useSafeAreaInsets();
+    if (insets) {
+      additionalBottomPadding = insets.bottom;
+      combinedBarStyle.push({ paddingBottom: additionalBottomPadding });
+    }
+  }
+
   return (
     <NavigationHelpersContext.Provider value={navigation}>
       <View style={[styles.contentContainer, contentStyle]}>
         {descriptors[state.routes[state.index].key].render()}
       </View>
-      <View style={[tabBarStyle, styles.bar]}>
+      <View style={finalBarStyle}>
         {state.routes.map((route, index) => {
           const focused = state.index === index;
           const options = descriptors[route.key].options;
