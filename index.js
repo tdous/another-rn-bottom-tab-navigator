@@ -61,7 +61,7 @@ export const AnotherRNBottomTabNavigator = (props) => {
     const insets = useSafeAreaInsets();
     if (insets) {
       additionalBottomPadding = insets.bottom;
-      combinedBarStyle.push({ paddingBottom: additionalBottomPadding });
+      finalBarStyle.push({ paddingBottom: additionalBottomPadding });
     }
   }
 
